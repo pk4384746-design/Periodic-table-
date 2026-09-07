@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ludo Board</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.board {
+    width: 90vw;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    border: 2px solid #777;
+}
+
+/* All cells */
+.cell {
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Red area */
+.red {
+    background: #f20d0d;
+}
+
+/* Green area */
+.green {
+    background: green;
+}
+
+/* Blue area */
+.blue {
+    background: #78c4eb;
+}
+
+/* Yellow area */
+.yellow {
+    background: yellow;
+}
+
+/* White paths */
+.white {
+    background: white;
+}
+
+/* Center */
+.center {
+    background: white;
+    position: relative;
+}
+
+.center::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 35px solid green;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 35px solid yellow;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Stars */
+.star {
+    font-size: 25px;
+}
+
+/* Start text */
+.start {
+    font-size: 10px;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="board">
+
+    <!-- Row 1 -->
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+
+    <!-- Row 2 -->
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell green">Start</div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+
+    <!-- Row 3 -->
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white">★</div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+
+    <!-- Row 4 -->
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+
+    <!-- Row 5 -->
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+
+    <!-- Row 6 -->
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell white"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+    <div class="cell green"></div>
+
+    <!-- Middle -->
+    <div class="cell white">Start</div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell black"></div>
+    <div class="cell white">3</div>
+    <div class="cell black"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white">★</div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+
+    <div class="cell white"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell red"></div>
+    <div class="cell white">4</div>
+    <div class="cell white">win</div>
+    <div class="cell white">2</div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white">★</div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white">1</div>
+    <div class="cell black"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow">Start</div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+
+    <!-- Blue / Yellow -->
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell star">★</div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell blue">Start</div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell blue"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell white"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+    <div class="cell yellow"></div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Periodic Table</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+    text-align:center;
+}
+
+h1{
+    color:#222;
+}
+
+.table{
+    display:grid;
+    grid-template-columns:repeat(18, 55px);
+    gap:5px;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.element{
+    width:55px;
+    height:55px;
+    border:2px solid #333;
+    border-radius:7px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+    font-weight:bold;
+    box-sizing:border-box;
+}
+
+.number{
+    font-size:8px;
+}
+
+.name{
+    font-size:8px;
+    font-weight:normal;
+}
+
+/* Colours */
+.nonmetal{background:#90caf9;}
+.noble{background:#ce93d8;}
+.alkali{background:#ffab91;}
+.alkaline{background:#ffe082;}
+.metalloid{background:#a5d6a7;}
+.metal{background:#80cbc4;}
+.transition{background:#f48fb1;}
+.lanthanide{background:#b39ddb;}
+.actinide{background:#ef9a9a;}
+</style>
+</head>
+
+<body>
+
+<h1>Periodic Table</h1>
+
+<div class="table">
+
+<!-- Period 1 -->
+<div class="element nonmetal">1<br>H<br><span class="name">Hydrogen</span></div>
+<div style="grid-column:span 16"></div>
+<div class="element noble">2<br>He<br><span class="name">Helium</span></div>
+
+<!-- Period 2 -->
+<div class="element alkali">3<br>Li<br><span class="name">Lithium</span></div>
+<div class="element alkaline">4<br>Be<br><span class="name">Beryllium</span></div>
+<div style="grid-column:span 10"></div>
+<div class="element metalloid">5<br>B<br><span class="name">Boron</span></div>
+<div class="element nonmetal">6<br>C<br><span class="name">Carbon</span></div>
+<div class="element nonmetal">7<br>N<br><span class="name">Nitrogen</span></div>
+<div class="element nonmetal">8<br>O<br><span class="name">Oxygen</span></div>
+<div class="element nonmetal">9<br>F<br><span class="name">Fluorine</span></div>
+<div class="element noble">10<br>Ne<br><span class="name">Neon</span></div>
+
+<!-- Period 3 -->
+<div class="element alkali">11<br>Na<br><span class="name">Sodium</span></div>
+<div class="element alkaline">12<br>Mg<br><span class="name">Magnesium</span></div>
+<div style="grid-column:span 10"></div>
+<div class="element metal">13<br>Al<br><span class="name">Aluminium</span></div>
+<div class="element metalloid">14<br>Si<br><span class="name">Silicon</span></div>
+<div class="element nonmetal">15<br>P<br><span class="name">Phosphorus</span></div>
+<div class="element nonmetal">16<br>S<br><span class="name">Sulfur</span></div>
+<div class="element nonmetal">17<br>Cl<br><span class="name">Chlorine</span></div>
+<div class="element noble">18<br>Ar<br><span class="name">Argon</span></div>
+
+<!-- Period 4 -->
+<div class="element alkali">19<br>K<br><span class="name">Potassium</span></div>
+<div class="element alkaline">20<br>Ca<br><span class="name">Calcium</span></div>
+<div class="element transition">21<br>Sc<br><span class="name">Scandium</span></div>
+<div class="element transition">22<br>Ti<br><span class="name">Titanium</span></div>
+<div class="element transition">23<br>V<br><span class="name">Vanadium</span></div>
+<div class="element transition">24<br>Cr<br><span class="name">Chromium</span></div>
+<div class="element transition">25<br>Mn<br><span class="name">Manganese</span></div>
+<div class="element transition">26<br>Fe<br><span class="name">Iron</span></div>
+<div class="element transition">27<br>Co<br><span class="name">Cobalt</span></div>
+<div class="element transition">28<br>Ni<br><span class="name">Nickel</span></div>
+<div class="element transition">29<br>Cu<br><span class="name">Copper</span></div>
+<div class="element transition">30<br>Zn<br><span class="name">Zinc</span></div>
+<div class="element metal">31<br>Ga<br><span class="name">Gallium</span></div>
+<div class="element metalloid">32<br>Ge<br><span class="name">Germanium</span></div>
+<div class="element metalloid">33<br>As<br><span class="name">Arsenic</span></div>
+<div class="element nonmetal">34<br>Se<br><span class="name">Selenium</span></div>
+<div class="element nonmetal">35<br>Br<br><span class="name">Bromine</span></div>
+<div class="element noble">36<br>Kr<br><span class="name">Krypton</span></div>
+
+<!-- Period 5 -->
+<div class="element alkali">37<br>Rb</div>
+<div class="element alkaline">38<br>Sr</div>
+<div class="element transition">39<br>Y</div>
+<div class="element transition">40<br>Zr</div>
+<div class="element transition">41<br>Nb</div>
+<div class="element transition">42<br>Mo</div>
+<div class="element transition">43<br>Tc</div>
+<div class="element transition">44<br>Ru</div>
+<div class="element transition">45<br>Rh</div>
+<div class="element transition">46<br>Pd</div>
+<div class="element transition">47<br>Ag</div>
+<div class="element transition">48<br>Cd</div>
+<div class="element metal">49<br>In</div>
+<div class="element metal">50<br>Sn</div>
+<div class="element metalloid">51<br>Sb</div>
+<div class="element metalloid">52<br>Te</div>
+<div class="element nonmetal">53<br>I</div>
+<div class="element noble">54<br>Xe</div>
+
+<!-- Period 6 -->
+<div class="element alkali">55<br>Cs</div>
+<div class="element alkaline">56<br>Ba</div>
+<div class="element lanthanide">57<br>La</div>
+<div class="element transition">72<br>Hf</div>
+<div class="element transition">73<br>Ta</div>
+<div class="element transition">74<br>W</div>
+<div class="element transition">75<br>Re</div>
+<div class="element transition">76<br>Os</div>
+<div class="element transition">77<br>Ir</div>
+<div class="element transition">78<br>Pt</div>
+<div class="element transition">79<br>Au</div>
+<div class="element transition">80<br>Hg</div>
+<div class="element metal">81<br>Tl</div>
+<div class="element metal">82<br>Pb</div>
+<div class="element metalloid">83<br>Bi</div>
+<div class="element metalloid">84<br>Po</div>
+<div class="element nonmetal">85<br>At</div>
+<div class="element noble">86<br>Rn</div>
+
+<!-- Period 7 -->
+<div class="element alkali">87<br>Fr</div>
+<div class="element alkaline">88<br>Ra</div>
+<div class="element actinide">89<br>Ac</div>
+<div class="element transition">104<br>Rf</div>
+<div class="element transition">105<br>Db</div>
+<div class="element transition">106<br>Sg</div>
+<div class="element transition">107<br>Bh</div>
+<div class="element transition">108<br>Hs</div>
+<div class="element transition">109<br>Mt</div>
+<div class="element transition">110<br>Ds</div>
+<div class="element transition">111<br>Rg</div>
+<div class="element transition">112<br>Cn</div>
+<div class="element metal">113<br>Nh</div>
+<div class="element metal">114<br>Fl</div>
+<div class="element metal">115<br>Mc</div>
+<div class="element metal">116<br>Lv</div>
+<div class="element nonmetal">117<br>Ts</div>
+<div class="element noble">118<br>Og</div>
+
+</div>
+
+<h2>Lanthanides</h2>
+
+<div class="table">
+<div class="element lanthanide">57<br>La</div>
+<div class="element lanthanide">58<br>Ce</div>
+<div class="element lanthanide">59<br>Pr</div>
+<div class="element lanthanide">60<br>Nd</div>
+<div class="element lanthanide">61<br>Pm</div>
+<div class="element lanthanide">62<br>Sm</div>
+<div class="element lanthanide">63<br>Eu</div>
+<div class="element lanthanide">64<br>Gd</div>
+<div class="element lanthanide">65<br>Tb</div>
+<div class="element lanthanide">66<br>Dy</div>
+<div class="element lanthanide">67<br>Ho</div>
+<div class="element lanthanide">68<br>Er</div>
+<div class="element lanthanide">69<br>Tm</div>
+<div class="element lanthanide">70<br>Yb</div>
+<div class="element lanthanide">71<br>Lu</div>
+</div>
+
+<h2>Actinides</h2>
+
+<div class="table">
+<div class="element actinide">89<br>Ac</div>
+<div class="element actinide">90<br>Th</div>
+<div class="element actinide">91<br>Pa</div>
+<div class="element actinide">92<br>U</div>
+<div class="element actinide">93<br>Np</div>
+<div class="element actinide">94<br>Pu</div>
+<div class="element actinide">95<br>Am</div>
+<div class="element actinide">96<br>Cm</div>
+<div class="element actinide">97<br>Bk</div>
+<div class="element actinide">98<br>Cf</div>
+<div class="element actinide">99<br>Es</div>
+<div class="element actinide">100<br>Fm</div>
+<div class="element actinide">101<br>Md</div>
+<div class="element actinide">102<br>No</div>
+<div class="element actinide">103<br>Lr</div>
+</div>
+
+</body>
+</html>
